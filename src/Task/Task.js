@@ -1,6 +1,6 @@
 function Task({ title }) {
   return (
-    <div>
+    <div className='task'>
       <h3>{title}</h3>
     </div>
   );

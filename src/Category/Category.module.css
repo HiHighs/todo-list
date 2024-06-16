@@ -1,0 +1,37 @@
+.container {
+  position: relative; /* Ensure relative positioning for the pseudo-element */
+  width: 100%; /* Ensures each category container takes full width of its grid cell */
+  max-width: 325px; /* Maximum width per category */
+  padding-top: 80%; /* Adjust the percentage to reduce height (e.g., 80%) */
+  border-radius: 20px;
+  border: 2px solid rgb(61, 0, 0);
+  overflow: hidden; /* Ensure content does not overflow */
+  text-align: center; /* Optional: Center text horizontally */
+}
+
+.innerContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 15px;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+}
+
+.container h3 {
+  margin: 0;
+}
+
+.taskList {
+  text-align: left;
+  /* list-style-type: '- '; */
+}
+
+.task {
+  list-style: disc;
+  font-size: 85%;
+}

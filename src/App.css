@@ -1,6 +1,6 @@
 .App {
-  width: 70%;
-  margin: 50px auto;
+  width: 65%;
+  margin: 30px auto;
   padding: 5px 20px;
   background-color: white;
   min-height: calc(100vh - 100px);
@@ -9,16 +9,18 @@
   border: 2px solid black;
 }
 
+h2 {
+  margin-bottom: 0;
+}
+
 .showForm {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 325px;
-  margin: 0 auto;
   background-color: bisque;
-  padding: 40px 50px;
   border-radius: 20px;
   border: 2px solid rgb(61, 0, 0);
+
+  position: relative; /* Ensure relative positioning for the pseudo-element */
+  width: 100%; /* Ensures each category container takes full width of its grid cell */
+  max-width: 325px; /* Maximum width per category */
 
   font-size: 150px;
   text-align: center;
@@ -28,4 +30,12 @@
 
 .showForm:hover {
   background-color: rgb(190, 152, 131);
+}
+
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns, equal width */
+  gap: 20px;
+  justify-items: center;
+  padding-bottom: 25px;
 }
