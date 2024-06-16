@@ -1,0 +1,16 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: antiquewhite;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent vertical scrolling */
+}
+
+#root {
+  height: 100%;
+}
