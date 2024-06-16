@@ -1,0 +1,32 @@
+.dateContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.dateBtn {
+  background-color: bisque;
+  border: none;
+  color: rgb(61, 0, 0);
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+  border: 2px solid rgb(61, 0, 0);
+}
+
+.dateBtn:hover {
+  background-color: rgb(190, 152, 131);
+}
+
+.dateText {
+  margin: 0 15px;
+  font-size: 19px;
+  font-weight: bold;
+  width: 150px; /* Fixed width */
+  text-align: center; /* Center align the text */
+}

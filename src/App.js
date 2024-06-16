@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Form from './Form/Form';
+import TaskDate from './TaskDate/TaskDate';
 
 const categories = [
   { name: 'Work', emoji: '💼' },
@@ -51,9 +52,12 @@ function App() {
       <h1>My TODO list</h1>
 
       {!showForm && (
-        <div className='showForm' onClick={() => setShowForm(true)}>
-          +
-        </div>
+        <>
+          <TaskDate />
+          <div className='showForm' onClick={() => setShowForm(true)}>
+            +
+          </div>
+        </>
       )}
       {showForm && (
         <Form
