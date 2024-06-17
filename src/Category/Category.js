@@ -1,6 +1,7 @@
+import Task from '../Task/Task';
 import styles from './Category.module.css';
 
-function Category({ name, emoji, color, tasks }) {
+function Category({ name, emoji, color, tasks, onToggleTaskCompleted }) {
   const style = {
     backgroundColor: `rgb(${color})`,
   };
@@ -13,7 +14,11 @@ function Category({ name, emoji, color, tasks }) {
         </h3>
         <ul className={styles.taskList}>
           {tasks.map((task) => (
-            <li className={styles.task}>{task.title}</li>
+            <Task
+              key={task.id}
+              task={task}
+              onToggleTaskCompleted={onToggleTaskCompleted}
+            />
           ))}
         </ul>
       </div>

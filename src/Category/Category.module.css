@@ -7,6 +7,8 @@
   border: 2px solid rgb(61, 0, 0);
   overflow: hidden; /* Ensure content does not overflow */
   text-align: center; /* Optional: Center text horizontally */
+
+  height: 50px;
 }
 
 .innerContainer {
@@ -29,9 +31,4 @@
 .taskList {
   text-align: left;
   /* list-style-type: '- '; */
-}
-
-.task {
-  list-style: disc;
-  font-size: 85%;
 }

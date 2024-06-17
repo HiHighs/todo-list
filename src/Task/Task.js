@@ -1,8 +1,15 @@
-function Task({ title }) {
+import styles from './Task.module.css';
+
+function Task({ task, onToggleTaskCompleted }) {
   return (
-    <div className='task'>
-      <h3>{title}</h3>
-    </div>
+    <>
+      <li
+        onClick={() => onToggleTaskCompleted(task.id)}
+        className={`${styles.task}  ${task.completed ? styles.completed : ''}`}
+      >
+        {task.title}
+      </li>
+    </>
   );
 }
 

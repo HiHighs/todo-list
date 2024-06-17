@@ -9,17 +9,21 @@ import {
   isYesterday,
 } from 'date-fns';
 
-function TaskDate({ initialDate = new Date() }) {
+function TaskDate({ initialDate = new Date(), onSetDate }) {
   const [date, setDate] = useState(initialDate);
 
   const dateString = getDateDisplayString(date);
 
   function previousDay() {
-    setDate((prevDate) => subDays(prevDate, 1));
+    const newDate = subDays(date, 1);
+    setDate(newDate);
+    onSetDate(newDate);
   }
 
   function nextDay() {
-    setDate((prevDate) => addDays(prevDate, 1));
+    const newDate = addDays(date, 1);
+    setDate(newDate);
+    onSetDate(newDate);
   }
 
   function getDateDisplayString(date) {
@@ -29,7 +33,7 @@ function TaskDate({ initialDate = new Date() }) {
       ? 'Yesterday'
       : isTomorrow(date)
       ? 'Tomorrow'
-      : format(date, 'eeee dd/mm/yyyy');
+      : format(date, 'eeee dd/MM/yyyy');
   }
 
   return (
@@ -37,7 +41,7 @@ function TaskDate({ initialDate = new Date() }) {
       <button className={styles.dateBtn} onClick={previousDay}>
         &#9664;
       </button>
-      <span title={format(date, 'eeee dd/mm/yyyy')} className={styles.dateText}>
+      <span title={format(date, 'eeee dd/MM/yyyy')} className={styles.dateText}>
         {dateString}
       </span>
       <button className={styles.dateBtn} onClick={nextDay}>

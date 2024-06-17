@@ -1,0 +1,9 @@
+.task {
+  list-style: disc;
+  font-size: 85%;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}

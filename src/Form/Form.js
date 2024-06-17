@@ -9,7 +9,12 @@ function Form({ categories, onAddTask, onCloseForm }) {
 
   function handleAddTask(e) {
     e.preventDefault();
-    const task = { title: title, category: category, date: date };
+    const task = {
+      title: title,
+      category: category,
+      date: new Date(date),
+      completed: false,
+    };
     onAddTask(task);
   }
 
